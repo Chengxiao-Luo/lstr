@@ -1,0 +1,9 @@
+PATH_TO_CONFIG_FILE=configs/THUMOS/LSTR/lstr_long_512_work_8_kinetics_1x.yaml
+PATH_TO_CHECKPOINT=checkpoints/THUMOS/LSTR/lstr_long_512_work_8_kinetics_1x/epoch-25.pth
+CUDA_VISIBLE_DEVICES=2
+
+#python tools/test_net.py --config_file $PATH_TO_CONFIG_FILE --gpu $CUDA_VISIBLE_DEVICES \
+#    MODEL.CHECKPOINT $PATH_TO_CHECKPOINT MODEL.LSTR.INFERENCE_MODE batch
+
+python test_net.py --config_file $PATH_TO_CONFIG_FILE --gpu $CUDA_VISIBLE_DEVICES \
+    MODEL.CHECKPOINT $PATH_TO_CHECKPOINT MODEL.LSTR.INFERENCE_MODE batch
